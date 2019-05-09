@@ -12,7 +12,8 @@
     <icon src="img/android/map.png" platform="android" width="64" height="64" density="ldpi" />
   </platform>
   <plugin name="cordova-plugin-geolocation" spec="~1.0.0" />
-  <plugin name="cordova-plugin-email-composer" version="0.8.3" source="npm" />
+  <!--<gap:plugin name="cordova-plugin-email-composer" version="0.8.3" source="npm" />-->
+  <gap:plugin name="de.appplant.cordova.plugin.email-composer" />
   
   <author href="#" email="kissoonvashil@gmail.com">
     Neeschal Kissoon

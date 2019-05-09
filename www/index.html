@@ -129,8 +129,8 @@
 
           </form>
         </div>
-         <input id="pop" type="submit" value="Login" class="zoli ui-btn ui-corner-all" />
-         <a href="#" id="calc" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Calculate</a>
+        <a href="#" id="calc" class="ui-btn">Anchor</a>
+        <button class="ui-btn">Button</button>
         <div class="text-center p-t-115">
           <span class="txt1">
             Don’t have an account?
@@ -803,20 +803,24 @@ function check_login(){
 
  </script>
 -->
- <script type="text/javascript">
+
+
+<!-- <script type="text/javascript">
    
- 
+ 	document.addEventListener('deviceready', function () {
+    // cordova.plugins.email is now available
+}, false);
  
 
 $("#calc").click(function(){
 
-	document.addEventListener('deviceready', function () {
-    // cordova.plugins.email is now available
-}, false);
+
+
+
 
  cordova.plugins.email.open({
-    app: 'gmail',
-    to: 'dooshyantram@gmail.com',
+	app: 'gmail',
+    to:      'dooshyantram@gmail.com',
     subject: 'Greetings',
     body:    'How are you? Nice greetings from Leipzig'
 });
@@ -827,15 +831,27 @@ $("#calc").click(function(){
 
 
 });
+</script>-->
+
+<script>
+
+	 $(document).ready(function() {
+	$("#calc").click(function(){
+
+	document.addEventListener('deviceready', function () {
+    // window.plugin.email is now available
+}, false);
+
+window.plugin.email.isServiceAvailable(
+    function (isAvailable) {
+       alert('Service is not available') unless isAvailable;
+    }
+);
 
 
- 
-
-
-
-
-
- </script>
+});
+});
+</script>
 </body>
 
 </html>
